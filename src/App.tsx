@@ -26,6 +26,11 @@ import StoreStatistics from './pages/StoreStatistics'; // Import BARU
 
 // IMPORT HALAMAN ADMIN
 import AdminDashboard from './pages/AdminDashboard'; // Import HALAMAN ADMIN
+import AdminVerifikasi from './pages/AdminVerifikasi';
+import AdminPengguna from './pages/AdminPengguna';
+import AdminTransaksi from './pages/AdminTransaksi';
+import AdminLog from './pages/AdminLog';
+import AdminPengaturan from './pages/AdminPengaturan';
 
 const App: React.FC = () => {
   return (
@@ -57,7 +62,12 @@ const App: React.FC = () => {
           <Route path="/merchant/profile/statistics" element={<StoreStatistics />} />
 
           {/* RUTE ADMIN */}
-          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/verifikasi" element={<AdminVerifikasi />} />
+          <Route path="/admin/pengguna" element={<AdminPengguna />} />
+          <Route path="/admin/transaksi" element={<AdminTransaksi />} />
+          <Route path="/admin/log" element={<AdminLog />} />
+          <Route path="/admin/pengaturan" element={<AdminPengaturan />} />
 
           {/* Fallback ke home jika rute tidak ditemukan */}
           <Route path="*" element={<Navigate to="/" replace />} />
